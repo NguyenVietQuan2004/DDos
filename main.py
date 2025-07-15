@@ -28,7 +28,7 @@ class CustomBinaryCrossentropy(BinaryCrossentropy):
 # Load mô hình
 model = load_model("best_model_30_1.h5", custom_objects={
     'BinaryCrossentropy': CustomBinaryCrossentropy
-})
+}, compile=False)
 
 # Load scaler
 scaler = joblib.load("scaler.pkl")
